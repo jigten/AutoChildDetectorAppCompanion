@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Auto Child Detector App Companion</string>
+
+    <!-- Category name for setup -->
+    <string name="category_Setup">Setup Your System</string>
+
+    <!-- Category name for system guide -->
+    <string name="category_Guide">System Guide</string>
+
+    <!-- Category name for kidsncars.org -->
+    <string name="category_kidsCars">Kids and Cars Organization</string>
+
 </resources>

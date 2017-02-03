@@ -15,6 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SetupActivity"
+            android:label="@string/category_Setup" />
+        <activity android:name=".GuideActivity"
+            android:label="@string/category_Guide" />
+        <activity android:name=".KidsCarsActivity"
+            android:label="@string/category_kidsCars"></activity>
     </application>
 
 </manifest>

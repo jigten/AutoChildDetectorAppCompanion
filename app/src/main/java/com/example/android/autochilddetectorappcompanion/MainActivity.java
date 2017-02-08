@@ -4,43 +4,47 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.word_list);
 
-        TextView setup = (TextView) findViewById(R.id.setupView);
-        TextView guide = (TextView) findViewById(R.id.guideView);
-        TextView kidscars = (TextView) findViewById(R.id.kidscarView);
+        final ArrayList<Word> words = new ArrayList<Word>();
+        words.add(new Word("Setup System","Initialize/Sync your system", R.drawable.setup));
+        words.add(new Word("System Guide", "Manual Guide for System", R.drawable.guide));
+        words.add(new Word("KidsandCars.org", "Charitable organization", R.drawable.kidscars));
 
-        setup.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the numbers View is clicked on.
+        WordAdapter adapter = new WordAdapter(this, words);
+        ListView listView = (ListView) findViewById(R.id.list);
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent setupIntent = new Intent(MainActivity.this, SetupActivity.class);
-                startActivity(setupIntent);
-            }
-        });
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Word word = words.get(position);
+                if (position == 0)
+                {
+                    Intent intent = new Intent(view.getContext(), SetupActivity.class);
+                    startActivity(intent);
+                }
+                else if (position == 1)
+                {
+                    Intent intent = new Intent(view.getContext(), GuideActivity.class);
+                    startActivity(intent);
+                }
 
-        guide.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the numbers View is clicked on.
-            @Override
-            public void onClick(View view) {
-                Intent guideIntent = new Intent(MainActivity.this, GuideActivity.class);
-                startActivity(guideIntent);
-            }
-        });
-
-        kidscars.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the numbers View is clicked on.
-            @Override
-            public void onClick(View view) {
-                Intent kidcarsIntent = new Intent(MainActivity.this, KidsCarsActivity.class);
-                startActivity(kidcarsIntent);
+                else
+                {
+                    Intent intent = new Intent(view.getContext(), KidsCarsActivity.class);
+                    startActivity(intent);
+                }
             }
         });
     }

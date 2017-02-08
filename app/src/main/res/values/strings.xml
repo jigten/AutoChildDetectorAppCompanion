@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Auto Child Detector App Companion</string>
+    <string name="app_name">Auto Child Detector App</string>
 
     <!-- Category name for setup -->
     <string name="category_Setup">Setup Your System</string>

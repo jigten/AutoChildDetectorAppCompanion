@@ -12,9 +12,7 @@
         android:id="@+id/arNum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         style="@style/CategoryStyle"
-        android:background="@color/category_guide"
         android:textAlignment="center"
         android:hint="Arduino Number"
         android:inputType= "phone" />
@@ -24,9 +22,7 @@
         android:id="@+id/uNum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         style="@style/CategoryStyle"
-        android:background="@color/category_kidcar"
         android:textAlignment="center"
         android:hint="Personal Number"
         android:inputType= "phone" />

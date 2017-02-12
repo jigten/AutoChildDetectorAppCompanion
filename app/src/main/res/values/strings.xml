@@ -10,4 +10,6 @@
     <!-- Category name for kidsncars.org -->
     <string name="category_kidsCars">Kids and Cars Organization</string>
 
+    <string name="notificationtitle">EMERGENCY AUTO CHILD DETECTION</string>
+
 </resources>

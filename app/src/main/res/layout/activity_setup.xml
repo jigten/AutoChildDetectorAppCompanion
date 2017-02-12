@@ -8,6 +8,15 @@
     android:orientation="vertical"
     tools:context="com.example.android.autochilddetectorappcompanion.SetupActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CategoryStyle"
+        android:text="Setup your device"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAlignment="center"
+        android:id="@+id/textView" />
+
     <EditText
         android:id="@+id/arNum"
         android:layout_width="match_parent"
@@ -15,6 +24,7 @@
         style="@style/CategoryStyle"
         android:textAlignment="center"
         android:hint="Arduino Number"
+        android:textColor="@color/colorPrimaryDark"
         android:inputType= "phone" />
 
 
@@ -25,14 +35,12 @@
         style="@style/CategoryStyle"
         android:textAlignment="center"
         android:hint="Personal Number"
+        android:textColor="@color/colorPrimaryDark"
         android:inputType= "phone" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:onClick="setup"
+        android:id="@+id/button"
         android:text="Continue"/>
-
-
-
 </LinearLayout>

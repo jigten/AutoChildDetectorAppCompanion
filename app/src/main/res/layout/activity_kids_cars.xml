@@ -8,13 +8,42 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.example.android.autochilddetectorappcompanion.KidsCarsActivity">
 
 
     <ImageView
+        android:id="@+id/logo_website"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src = "@drawable/logo" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="KidsAndCars.org is an non-profit organisation founded to protect children inside and around motor vehicles from unrecognized dangers that are non traffic."
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="KidsAndCars.org continues to research and apply modern technologies to aid in preventing tragedies related to children and motor vehicles."
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorPrimary"
+        android:text="To find our more, visit the official KidsAndCars.org website by clicking the logo banner at the top or head to the official Facebook page with link provided below. If you wish to donate, a link to their donation page has been provided below." />
+
+    <ImageView
+        android:id="@+id/donate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/donate"
+        android:layout_marginLeft="16dp"/>
 
 </LinearLayout>

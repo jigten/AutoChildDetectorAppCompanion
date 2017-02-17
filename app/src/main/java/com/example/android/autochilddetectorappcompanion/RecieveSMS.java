@@ -1,5 +1,6 @@
 package com.example.android.autochilddetectorappcompanion;
 
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -48,7 +49,8 @@ public class RecieveSMS extends BroadcastReceiver {
                                 new NotificationCompat.Builder(context)
                                         .setSmallIcon(R.drawable.logosmall)
                                         .setContentTitle("Auto Child Detector")
-                                        .setPriority(2)
+                                        .setPriority(Notification.PRIORITY_MAX)
+                                        .setDefaults(Notification.DEFAULT_ALL)
                                         .setVisibility(1)
                                         .setLights(Color.RED, 1000, 500)
                                         .setContentText("CHILD DETECTED INSIDE HOT VECHIClE");
@@ -58,6 +60,21 @@ public class RecieveSMS extends BroadcastReceiver {
 
                         WakeLocker.release();
                     }
+                    else if (message.equals("Setup Complete"))  {
+                        NotificationCompat.Builder mBuilder =
+                                new NotificationCompat.Builder(context)
+                                        .setSmallIcon(R.drawable.logosmall)
+                                        .setContentTitle("Auto Child Detector")
+                                        .setPriority(Notification.PRIORITY_MAX)
+                                        .setDefaults(Notification.DEFAULT_ALL)
+                                        .setVisibility(1)
+                                        .setLights(Color.RED, 1000, 500)
+                                        .setContentText("Setup Complete");
+
+                        NotificationManager mNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+                        mNotificationManager.notify(1, mBuilder.build());
+                    }
+
                 }
 
             }

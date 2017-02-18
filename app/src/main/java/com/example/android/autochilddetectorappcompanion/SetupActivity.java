@@ -41,6 +41,8 @@ public class SetupActivity extends AppCompatActivity {
                         null,
                         null);
                 textView.setText("Wait for Device Confirmation");
+                View loadingIndicator = findViewById(R.id.loading_indicator);
+                loadingIndicator.setVisibility(View.VISIBLE);
             }
         });
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
